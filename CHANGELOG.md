@@ -4,6 +4,10 @@ All notable changes to this course are documented here. The format follows [Keep
 
 ## [Unreleased]
 
+### Fixed (2026-11-10)
+- Lesson tables no longer split short words across lines (for example "Index" in the Spectral indices table).
+- Lab 2 (accuracy and area): the confusion matrix now fits the page at desktop width, so the mapped-area column is no longer cut off; on narrow screens a note says the table scrolls sideways. The Remove button is now a compact "×" with the same accessible name.
+
 ### Changed (soft-clay look, 2026-10-31)
 - New "soft clay" visual style: panels, cards, asides, quizzes, labs, the slide player, the workflow map and buttons are rounded and gently raised; chosen options and inputs look pressed in. Body text, code, tables and maths stay flat. Dark mode uses a subtler version. Tokens: `--clay-*` in `src/styles/theme.css`; Starlight parts in `src/styles/clay.css`.
 - Home page: original clay-style hero illustration (`src/assets/hero-clay.svg`, 3.5 KB) and a tint per day card.

@@ -20,6 +20,7 @@ import '~/styles/labs.css';
 			<div class="hfld-lab__scroll" tabindex="0" role="region" aria-label="Confusion matrix">
 				<table class="hfld-lab__table hfld-lab__matrix" data-matrix></table>
 			</div>
+			<p class="hfld-lab__hint" data-scroll-hint hidden>Scroll the table sideways to see every column.</p>
 			<div class="hfld-lab__buttons">
 				<button type="button" data-add>Add a class</button>
 				<button type="button" data-example>Load the Day 5 workbook example</button>
@@ -137,6 +138,7 @@ import '~/styles/labs.css';
 				? { ...saved, mappedAreaHa: saved.mappedAreaHa.map(unblank), matrix: saved.matrix.map((r) => r.map(unblank)) }
 				: workbookExample();
 			this.drawMatrix();
+			window.addEventListener('resize', () => this.showScrollHint());
 			this.setOptions();
 			this.form.addEventListener('input', (e) => {
 				if ((e.target as HTMLElement).closest('textarea')) return;
@@ -201,11 +203,12 @@ import '~/styles/labs.css';
 							)
 							.join('') +
 						`<td><input type="number" min="0" step="any" data-area="${i}" value="${Math.round(mappedAreaHa[i] * 1000) / 1000}" aria-label="Mapped area of ${esc(c)} in hectares"></td>` +
-						`<td>${k > 2 ? `<button type="button" data-remove="${i}" aria-label="Remove ${esc(c)}">Remove</button>` : ''}</td></tr>`,
+						`<td>${k > 2 ? `<button type="button" data-remove="${i}" aria-label="Remove ${esc(c)}" title="Remove ${esc(c)}">×</button>` : ''}</td></tr>`,
 				)
 				.join('');
 			const table = this.querySelector<HTMLTableElement>('[data-matrix]')!;
 			table.innerHTML = head + `<tbody>${body}</tbody>`;
+			this.showScrollHint();
 			table.querySelectorAll<HTMLButtonElement>('[data-remove]').forEach((b) =>
 				b.addEventListener('click', () => {
 					const i = Number(b.dataset.remove);
@@ -218,6 +221,13 @@ import '~/styles/labs.css';
 					this.update();
 				}),
 			);
+		}
+
+		/** Say so when the matrix is wider than its box (many classes, or a phone). */
+		private showScrollHint() {
+			const box = this.querySelector<HTMLElement>('[data-matrix]')!.parentElement!;
+			const hint = this.querySelector<HTMLElement>('[data-scroll-hint]')!;
+			hint.hidden = box.scrollWidth <= box.clientWidth + 1;
 		}
 
 		/** Read the inputs into state. Area values are kept at full precision unless edited. */

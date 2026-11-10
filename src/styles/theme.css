@@ -108,8 +108,10 @@ h1#_top::after {
 	width: 100%;
 	table-layout: auto;
 }
+/* break-word, not anywhere: "anywhere" lets the browser shrink a column to one letter, which split
+   short words such as "Index" (task M9-01). Long code in cells still wraps (rule below). */
 .sl-markdown-content :is(th, td) {
-	overflow-wrap: anywhere;
+	overflow-wrap: break-word;
 }
 
 /* Glossary page (reference/glossary): one entry per div so each has an anchor. */

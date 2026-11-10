@@ -94,6 +94,36 @@
 .hfld-lab__table input[type='number'] {
 	width: 9rem;
 }
+/* Confusion matrix (Lab 2): narrow count cells and a wrapping header, so three classes and the
+   mapped-area column fit the lesson column without scrolling (task M9-02). */
+.hfld-lab__matrix thead th {
+	white-space: normal;
+}
+.hfld-lab__matrix :is(th, td) {
+	padding: 0.3rem 0.35rem;
+}
+.hfld-lab__matrix input {
+	box-sizing: border-box;
+	padding-inline: 0.45rem;
+}
+.hfld-lab__matrix input[data-name] {
+	width: 7rem;
+}
+.hfld-lab__matrix input[data-cell] {
+	width: 4.25rem;
+}
+.hfld-lab__matrix input[data-area] {
+	width: 7.5rem;
+	/* No spinner: areas are typed or pasted, and the arrows hid the last digits. */
+	appearance: textfield;
+}
+.hfld-lab__matrix input[data-area]::-webkit-inner-spin-button {
+	appearance: none;
+}
+.hfld-lab__matrix button[data-remove] {
+	min-width: 2.5rem;
+	padding-inline: 0.5rem;
+}
 .hfld-lab__table[data-strata] {
 	min-width: 48rem;
 }
@@ -182,12 +212,6 @@
 .hfld-lab textarea:focus-visible {
 	outline: 3px solid var(--sl-color-accent);
 	outline-offset: 2px;
-}
-.hfld-lab__matrix input[type='number'] {
-	width: 6.5rem;
-}
-.hfld-lab__matrix input[data-area] {
-	width: 10rem;
 }
 .hfld-lab__note {
 	font-size: var(--sl-text-sm);

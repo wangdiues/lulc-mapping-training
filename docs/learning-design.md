@@ -12,10 +12,10 @@ Task M0-06 · 2026-10-26 · Sources: the training agenda's daily objectives; WEB
 
 | Persona | Background | Goal | What this means for design |
 |---|---|---|---|
-| **Pema, GIS officer (DoFPS/FRMD)** | Uses QGIS/ArcGIS daily; little or no coding; knows Bhutan's forests well | Produce and defend the activity data for Bhutan's HFLD submission | Needs runnable, Bhutan-specific code; explanations of *why*; the ART-TREES links made explicit. Main audience. |
-| **Karma, forestry graduate (CNR)** | Remote-sensing theory from university; new to Earth Engine and JavaScript | Build job-ready MRV skills | Needs scaffolded practice (complete → fill in → from scratch), quizzes, a certificate |
+| **Pema, GIS officer (DoFPS/FRMD)** | Uses QGIS/ArcGIS daily; little or no coding; knows Bhutan's forests well | Produce a land-cover map of Bhutan and defend its accuracy and area estimates | Needs runnable, Bhutan-specific code; explanations of *why*. Main audience. |
+| **Karma, forestry graduate (CNR)** | Remote-sensing theory from university; new to Earth Engine and JavaScript | Build job-ready land-cover mapping skills | Needs scaffolded practice (complete → fill in → from scratch), quizzes, a certificate |
 | **Dr. Lhamo, trainer or reviewer** | Expert in remote sensing or REDD+; runs workshops | Teach the course or check its methods | Needs trainer mode, timings, explanation pages, citations, a downloadable deck |
-| **International practitioner** | Earth Engine user in another HFLD country (e.g. Guyana, Suriname, Gabon) | Adapt the workflow to their own country | Needs the method separated from Bhutan-specific values; reference pages |
+| **International practitioner** | Earth Engine user in another country | Adapt the workflow to their own country | Needs the method separated from Bhutan-specific values; reference pages |
 
 **Prerequisites for everyone:** a Google account with Earth Engine access (registered to a Cloud project); a laptop with Chrome or Firefox; basic GIS ideas (raster, vector, projection). No programming experience is assumed.
 
@@ -94,7 +94,7 @@ Assessed by: **the capstone** (M6-03). Each group makes a 6-class 2025 map for o
 | M4-28 | Determining sample size | (1) compute n = (ΣWᵢSᵢ / SE)²; (2) compare equal, proportional and minimum-N allocation; (3) choose an allocation and justify it | L: Lab 1 (embedded); C(complete): ±20% margin of error and an allocation with a minimum per stratum; Q×4 | 15+25 |
 | M4-29 | Stratified sampling in GEE | (1) draw samples with `stratifiedSample`; (2) index them and build plots; (3) export for CEO | C(complete): 10 per class for one Dzongkhag; Q×2 | 15+25 |
 | M4-30 | Accuracy & area adjustment | (1) build a confusion matrix; (2) compute user's, producer's and overall accuracy; (3) compute area-adjusted estimates, SE and the 90% CI; (4) state the percentage uncertainty | L: Lab 2; C(fill-in): recompute the worked example (17,000 ha → 13,304 ± 2,459 ha; SE 1,495 ha); Q×4; K: capstone table | 25+35 |
-| M4-31 | Reporting & documentation *(new)* | (1) assemble an activity-data table for TREES 3.0; (2) document assumptions, versions and code so others can reproduce the work | K: capstone documentation checklist; Q×2 | 20+20 |
+| M4-31 | Reporting & documentation *(new)* | (1) assemble an activity-data table; (2) document assumptions, versions and code so others can reproduce the work | K: capstone documentation checklist; Q×2 | 20+20 |
 | M4-32 | Day 5 recap & quiz | retrieval of M4-27..31, plus 3 earlier items | Q×10 | 0+20 |
 
 ### Explanation, how-to & reference

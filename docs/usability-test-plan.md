@@ -18,7 +18,7 @@
 | 3 | In "Spectral indices", find what NDVI is and try the index explorer. | Explains NDVI in own words; moves a slider. | Theory panels, sliders on a phone. |
 | 4 | Open the Day 3 slides and find the slide about how a decision tree works. | Finds it with arrows or swipe. | Slide player controls. |
 | 5 | In the accuracy and area estimator, change one count and read the adjusted forest area and its 90% CI. | Reads both numbers correctly. | Table size on a phone; the CI wording. |
-| 6 | Find which TREES section says how uncertainty is calculated. | Finds Section 8 via the ART-TREES lesson or search. | Search, navigation. |
+| 6 | Find what "producer's accuracy" means and which lesson teaches it. | Finds the glossary entry or the accuracy lesson through search. | Search, navigation. |
 | 7 | Mark a lesson complete and find your progress. | Sees the sidebar progress panel. | Discoverability. |
 | 8 | Without a connection (airplane mode, after visiting), open a lesson you visited. | Page loads. | Offline behaviour. |
 

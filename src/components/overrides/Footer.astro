@@ -14,6 +14,12 @@ const key = pageKey(Astro.url.pathname, base);
 const lesson = isLessonKey(key);
 const slots = sessionsFor(key);
 const days = [...new Set(slots.map((s) => s.day))];
+
+// "Report an error" (task M9-05): opens the content-error issue form with this page filled in.
+const pageTitle = Astro.locals.starlightRoute?.entry?.data?.title ?? 'this page';
+const report =
+	'https://github.com/wangdiues/lulc-mapping-training/issues/new?' +
+	new URLSearchParams({ template: 'content-error.yml', title: `Error on: ${pageTitle}`, page: Astro.url.href });
 ---
 
 {
@@ -60,6 +66,9 @@ const days = [...new Set(slots.map((s) => s.day))];
 		</hfld-complete>
 	)
 }
+<p class="hfld-report">
+	Found a mistake? <a href={report}>Report an error on this page</a>.
+</p>
 <Default />
 
 <script>
@@ -113,6 +122,19 @@ const days = [...new Set(slots.map((s) => s.day))];
 </style>
 
 <style>
+	.hfld-report {
+		margin-block: 1.5rem 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+	}
+	.hfld-report a {
+		color: var(--sl-color-text-accent);
+	}
+	@media print {
+		.hfld-report {
+			display: none;
+		}
+	}
 	.hfld-complete {
 		display: block;
 		margin-block: 2rem 1rem;

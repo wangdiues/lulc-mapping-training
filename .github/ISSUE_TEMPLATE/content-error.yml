@@ -1,0 +1,25 @@
+name: Report an error
+description: A mistake in a lesson, script, quiz, lab or slide.
+title: "Error on: "
+labels: ["content-error"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page with the error.
+      placeholder: https://wangdiues.github.io/lulc-mapping-training/day-1/javascript-basics/
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong?
+      description: Quote the sentence, code line or quiz question, and say what you saw. For a script, paste the error message from the Earth Engine Console.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it say or do?
+      description: Leave blank if you are not sure.

@@ -4,7 +4,10 @@
  * Server-rendered radio groups (one fieldset per question), so it is keyboard accessible
  * with native controls. A small custom element marks answers, reveals each explanation
  * and saves the score in localStorage (wrapped in try/catch; works without it).
+ * A question may name the lesson that covers it (`see`), shown as a link after the explanation.
  */
+import { getEntry } from 'astro:content';
+
 interface Question {
 	q: string;
 	/** Omit for true/false questions. */
@@ -12,6 +15,8 @@ interface Question {
 	/** Index into options, or true/false for a true/false question. */
 	answer: number | boolean;
 	explain: string;
+	/** Docs id of the lesson to revise, e.g. "day-1/image-collections" (the build fails if it does not exist). */
+	see?: string;
 }
 interface Props {
 	/** Stable id, used as the storage key, e.g. "day-1-javascript-basics". */
@@ -21,13 +26,20 @@ interface Props {
 }
 
 const { id, questions, title = 'Check your understanding' } = Astro.props;
-const items = questions.map((qn) => {
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const items = await Promise.all(questions.map(async (qn) => {
 	const tf = typeof qn.answer === 'boolean';
 	const options = tf ? ['True', 'False'] : (qn.options ?? []);
 	const correct = tf ? (qn.answer ? 0 : 1) : (qn.answer as number);
 	if (correct < 0 || correct >= options.length) throw new Error(`Quiz ${id}: answer out of range in "${qn.q}"`);
-	return { ...qn, options, correct };
-});
+	let seeLink: { href: string; title: string } | undefined;
+	if (qn.see) {
+		const entry = await getEntry('docs', qn.see);
+		if (!entry) throw new Error(`Quiz ${id}: no page "${qn.see}" (see) in "${qn.q}"`);
+		seeLink = { href: `${base}${qn.see}/`, title: entry.data.title };
+	}
+	return { ...qn, options, correct, seeLink };
+}));
 ---
 
 <hfld-quiz class="hfld-quiz not-content" data-id={id}>
@@ -48,6 +60,11 @@ const items = questions.map((qn) => {
 					<p class="hfld-quiz__feedback" aria-live="polite" hidden>
 						<strong class="hfld-quiz__verdict" />{' '}
 						<span>{qn.explain}</span>
+						{qn.seeLink && (
+							<span>
+								{' '}See <a href={qn.seeLink.href}>{qn.seeLink.title}</a>.
+							</span>
+						)}
 					</p>
 				</fieldset>
 			))
@@ -180,6 +197,10 @@ const items = questions.map((qn) => {
 	.hfld-quiz__feedback {
 		margin: 0.5rem 0 0;
 		color: var(--sl-color-gray-1);
+	}
+	.hfld-quiz__feedback a {
+		color: var(--sl-color-text-accent);
+		text-decoration: underline;
 	}
 	.hfld-quiz__q[data-state='right'] .hfld-quiz__verdict {
 		color: var(--sl-color-green-high);

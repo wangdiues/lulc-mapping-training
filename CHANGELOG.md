@@ -4,6 +4,10 @@ All notable changes to this course are documented here. The format follows [Keep
 
 ## [Unreleased]
 
+### Added (2026-11-10)
+- "Report an error on this page" link at the foot of every page; it opens a GitHub issue form with the page already filled in. Issue forms for errors and suggestions (`.github/ISSUE_TEMPLATE/`).
+- Recap quizzes: each explanation now links to the lesson that covers the question (`see` on a quiz question; the build fails if the page does not exist).
+
 ### Changed (2026-11-10)
 - The Day 2 lessons "Sentinel-2 MRV composite" and "Landsat MRV composite" are now titled **Sentinel-2 composite** and **Landsat composite** (owner's decision). Their URLs and script file names are unchanged; the original manual names stay on the Acknowledgements and credits page.
 - `CITATION.cff` keywords no longer list REDD+ and MRV; `package.json` version matches `CITATION.cff` (0.1.0).

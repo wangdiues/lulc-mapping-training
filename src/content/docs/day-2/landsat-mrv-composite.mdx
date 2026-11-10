@@ -1,5 +1,5 @@
 ---
-title: "Landsat MRV composite"
+title: "Landsat composite"
 description: Build the annual Landsat 8/9 product for Bhutan's MRV, with harmonised surface reflectance, QA and TDOM masking, SCS+C terrain correction, and Jan–Apr and Oct–Dec medians exported as one 12-band Int16 image.
 sidebar:
   order: 5
@@ -21,10 +21,10 @@ import CodeBlock from '~/components/CodeBlock.astro';
     "Export a seasonal composite.",
   ]}
   teaching={20} exercises={30}
-  prerequisites={["Sentinel-2 MRV composite"]}
+  prerequisites={["Sentinel-2 composite"]}
 />
 
-This workflow follows the [Sentinel-2 MRV composite](/lulc-mapping-training/day-2/sentinel-2-mrv-composite/) step for step, adapted for Landsat 8 and 9. It turns raw imagery into a stable annual product for inter-annual monitoring and model training: masking, scaling, seasonal compositing and one structured export. The aim is not to use as much data as possible, but a consistent, repeatable dataset.
+This workflow follows the [Sentinel-2 composite](/lulc-mapping-training/day-2/sentinel-2-mrv-composite/) step for step, adapted for Landsat 8 and 9. It turns raw imagery into a stable annual product for inter-annual monitoring and model training: masking, scaling, seasonal compositing and one structured export. The aim is not to use as much data as possible, but a consistent, repeatable dataset.
 
 **Why Landsat as well as Sentinel-2?** Landsat has 30 m pixels, but its archive goes back to the 1980s, so it can extend a time series back before Sentinel-2 began in 2015. The same method, applied to Landsat 5 or 7 with their own band names (their optical bands are SR_B1–SR_B5 and SR_B7), can produce earlier years.
 

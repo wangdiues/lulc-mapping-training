@@ -30,7 +30,7 @@ Please answer in any form (email, comments, or GitHub issues). Every answer beco
 
 ## 4. Methods and code
 
-- [ ] ★ Run three scripts from the [script library](https://wangdiues.github.io/lulc-mapping-training/reference/script-library/) (suggested: Sentinel-2 MRV composite, forest primitives, stratified sampling). Do they run and match your results?
+- [ ] ★ Run three scripts from the [script library](https://wangdiues.github.io/lulc-mapping-training/reference/script-library/) (suggested: Sentinel-2 composite, forest primitives, stratified sampling). Do they run and match your results?
 - [ ] Assets: which `projects/bhutan-hfld-readiness-training/…` and `projects/servir-mekong/…` assets can stay readable by the public? (See the [asset catalogue](https://wangdiues.github.io/lulc-mapping-training/reference/assets/).)
 - [ ] Labs 1 and 2 reproduce your workbooks to 1e-6. The accuracy lab uses Olofsson et al.'s variance rule by default and offers the workbook rule as an option. Agree?
 

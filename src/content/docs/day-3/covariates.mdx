@@ -24,7 +24,7 @@ import References from '~/components/References.astro';
     "Explain what each covariate adds to separating classes.",
   ]}
   teaching={20} exercises={30}
-  prerequisites={["Landsat MRV composite", "Random Forest theory"]}
+  prerequisites={["Landsat composite", "Random Forest theory"]}
 />
 
 In machine learning for maps, <Term id="covariate">covariates</Term> are variables derived from the data that describe the land surface. They are the inputs (features) to classifiers such as Random Forest, Gradient Boosted Trees or Support Vector Machines. Raw bands alone often can't separate similar classes; covariates make the differences explicit.
@@ -44,7 +44,7 @@ Better covariates mean better predictions: they help distinguish similar classes
 **Inputs:** the Landsat 8/9 seasonal composite from Day 2 (the function uses Landsat band names: B5 is NIR, B6 and B7 SWIR; for the Sentinel-2 composite, use B8, B11 and B12 instead, because B5–B7 are red-edge bands there), the [SRTM DEM](https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003), and the [JRC Global Surface Water](https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_4_GlobalSurfaceWater) dataset.
 
 <Callout type="mistake" title="Inputs you need">
-The script loads `projects/bhutan-hfld-readiness-training/assets/landsatComposite/bhutan_ls89_2025_TashiY`, one participant's export from the training. Replace it with your own export from the [Landsat MRV composite](/lulc-mapping-training/day-2/landsat-mrv-composite/) lesson. Part 7 also needs two point imports drawn in the Code Editor, `forest` and `nonForest`, each with a numeric property `class` (forest = 1, other = 0); [Collecting training data](/lulc-mapping-training/day-4/training-data/) shows how.
+The script loads `projects/bhutan-hfld-readiness-training/assets/landsatComposite/bhutan_ls89_2025_TashiY`, one participant's export from the training. Replace it with your own export from the [Landsat composite](/lulc-mapping-training/day-2/landsat-mrv-composite/) lesson. Part 7 also needs two point imports drawn in the Code Editor, `forest` and `nonForest`, each with a numeric property `class` (forest = 1, other = 0); [Collecting training data](/lulc-mapping-training/day-4/training-data/) shows how.
 </Callout>
 
 ## Part 1: Load and look at the composite

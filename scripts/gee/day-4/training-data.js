@@ -12,7 +12,7 @@
  *   - `alphaEarth`, used but not defined in the exercise, is the 2024 Satellite Embedding image.
  *
  * The Sentinel-2 composite and the labels are the trainers' prepared assets; with no access, use your
- * own composite (Sentinel-2 MRV composite lesson) and your own labelled points.
+ * own composite (Sentinel-2 composite lesson) and your own labelled points.
  *
  * Original Code Editor script(s):
  *   https://code.earthengine.google.com/49b9fc4c9f6ad7e7a8c58933f3aba994

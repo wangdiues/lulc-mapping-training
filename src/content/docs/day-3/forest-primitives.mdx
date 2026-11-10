@@ -32,7 +32,7 @@ import References from '~/components/References.astro';
 A <Term id="primitive" /> is a probability layer for one land-cover class: for every pixel, the likelihood (0 to 1, or 0 to 100) that it belongs to that class. Instead of one classifier choosing among all classes at once, you train a separate **one-class-versus-the-rest** Random Forest for each class, then combine the primitives with rules on Day 4 (the [assemblage](/lulc-mapping-training/day-4/assemblage/)) <Cite id="saah2020" />. This lesson builds the **forest** primitive; the same script makes the others by changing one word.
 
 <Callout type="mistake" title="Inputs you need">
-The script reads two assets from the training project: the labelled samples `trainingData/Bhutan_labels_multiclass` and a 2025 Landsat composite (one participant's export, `landsatComposite/bhutan_ls89_2025_TashiY`). Without access, use your own composite from the [Landsat MRV composite](/lulc-mapping-training/day-2/landsat-mrv-composite/) lesson and your own labelled points with a `class_name` property ([Collecting training data](/lulc-mapping-training/day-4/training-data/)). Change the export `assetId` to your own project.
+The script reads two assets from the training project: the labelled samples `trainingData/Bhutan_labels_multiclass` and a 2025 Landsat composite (one participant's export, `landsatComposite/bhutan_ls89_2025_TashiY`). Without access, use your own composite from the [Landsat composite](/lulc-mapping-training/day-2/landsat-mrv-composite/) lesson and your own labelled points with a `class_name` property ([Collecting training data](/lulc-mapping-training/day-4/training-data/)). Change the export `assetId` to your own project.
 </Callout>
 
 ## Part 1: The area of interest

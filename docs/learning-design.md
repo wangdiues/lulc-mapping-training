@@ -62,8 +62,8 @@ Assessed by: **the capstone** (M6-03). Each group makes a 6-class 2025 map for o
 | M4-08 | Fundamentals of remote sensing | (1) explain reflectance curves of vegetation, water and soil; (2) compare spatial, spectral, temporal and radiometric resolution; (3) choose a sensor for a task | Q×4; L: Lab 3 (reflectance sliders) | 30+0 |
 | M4-09 | Spectral indices & functions | (1) compute NDVI and NDWI with `normalizedDifference`; (2) compute EVI/SAVI with `expression`; (3) produce min/median/max index composites | C(fill-in): EVI function; L: Lab 3; Q×3 | 20+30 |
 | M4-10 | Mosaics & composites (concepts) | (1) tell a mosaic from a composite; (2) explain atmospheric, BRDF and topographic correction; (3) explain why median compositing is used | Q×4 | 20+0 |
-| M4-11 | Sentinel-2 MRV composite | (1) justify the Jan–Apr / Oct–Dec windows for Bhutan; (2) apply Cloud Score+ and TDOM shadow masking; (3) apply terrain correction; (4) export a 12-band Int16 composite | C(complete): run the full script for 2025; C(fill-in): change the year and the cloud threshold; Q×4 | 30+45 |
-| M4-12 | Landsat MRV composite | (1) harmonise Landsat 8/9 surface reflectance; (2) apply QA-based masking and scaling; (3) export a seasonal composite | C(fill-in): a 2024 composite; Q×3 | 20+30 |
+| M4-11 | Sentinel-2 composite | (1) justify the Jan–Apr / Oct–Dec windows for Bhutan; (2) apply Cloud Score+ and TDOM shadow masking; (3) apply terrain correction; (4) export a 12-band Int16 composite | C(complete): run the full script for 2025; C(fill-in): change the year and the cloud threshold; Q×4 | 30+45 |
+| M4-12 | Landsat composite | (1) harmonise Landsat 8/9 surface reflectance; (2) apply QA-based masking and scaling; (3) export a seasonal composite | C(fill-in): a 2024 composite; Q×3 | 20+30 |
 | M4-13 | Importing & exporting data | (1) upload a shapefile and a CSV as assets; (2) export images and tables to Drive and to assets; (3) export a video | C(complete): export Dynamic World 2023 for an AOI; Q×3 | 20+25 |
 | M4-14 | Day 2 recap & quiz | retrieval of M4-08..13, plus 2 Day 1 items | Q×8 | 0+15 |
 

@@ -55,7 +55,7 @@ These links can break when their owner deletes or edits the script, so each scri
 | https://code.earthengine.google.com/946119d88943098d0e8c6bc7fb7bcc12 | D2 Spectral indices exercise | M4-09 |
 | https://code.earthengine.google.com/2fd4b21119ef4b9c6ff6893f3a7e9c9e | D2 Mosaics & composites (main script) | M4-10 |
 | https://code.earthengine.google.com/53d893180be40059cfde3df41385950a | D2 S2 MRV composite manual | M4-11 |
-| https://code.earthengine.google.com/d294311d88eee5ab7cb82a26bbf33640 | D2 Landsat MRV composite manual | M4-12 |
+| https://code.earthengine.google.com/d294311d88eee5ab7cb82a26bbf33640 | D2 Landsat composite manual | M4-12 |
 | https://code.earthengine.google.com/0769e2dbd6752d9dbf8ed8c2da1743fe | D2 Import/Export (export assignment) | M4-13 |
 | https://code.earthengine.google.com/c86323c2a144391b5218fb1d5d9e465f | D3 Covariates | M4-16 |
 | https://code.earthengine.google.com/f6ac698d62c5a93294b37c210166c41c | D3 Covariates | M4-16 |

@@ -4,6 +4,10 @@ All notable changes to this course are documented here. The format follows [Keep
 
 ## [Unreleased]
 
+### Changed (2026-11-10)
+- The Day 2 lessons "Sentinel-2 MRV composite" and "Landsat MRV composite" are now titled **Sentinel-2 composite** and **Landsat composite** (owner's decision). Their URLs and script file names are unchanged; the original manual names stay on the Acknowledgements and credits page.
+- `CITATION.cff` keywords no longer list REDD+ and MRV; `package.json` version matches `CITATION.cff` (0.1.0).
+
 ### Fixed (2026-11-10)
 - Lesson tables no longer split short words across lines (for example "Index" in the Spectral indices table).
 - Lab 2 (accuracy and area): the confusion matrix now fits the page at desktop width, so the mapped-area column is no longer cut off; on narrow screens a note says the table scrolls sideways. The Remove button is now a compact "×" with the same accessible name.

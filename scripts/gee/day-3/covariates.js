@@ -11,7 +11,7 @@
  *   - The probability export is named for forest (the training classes are forest / non-forest);
  *     the exercise named it "urban_AP" / urbanAP2025.
  *
- * Inputs: the 2025 Landsat composite from the Landsat MRV composite lesson (the path below is a
+ * Inputs: the 2025 Landsat composite from the Landsat composite lesson (the path below is a
  * participant's export in the training project; use your own), and two point imports drawn in the
  * Code Editor, `forest` and `nonForest`, each with a numeric property `class` (forest = 1, other = 0).
  *

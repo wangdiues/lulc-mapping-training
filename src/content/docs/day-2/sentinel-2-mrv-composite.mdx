@@ -1,5 +1,5 @@
 ---
-title: "Sentinel-2 MRV composite"
+title: "Sentinel-2 composite"
 description: Build Bhutan's annual Sentinel-2 product for MRV, with Jan–Apr and Oct–Dec median composites after Cloud Score+ masking, TDOM shadow cleaning and terrain correction, exported as one 12-band Int16 image.
 sidebar:
   order: 4
@@ -233,7 +233,7 @@ Everything else follows from these two values. A stricter threshold removes more
 ## Check your understanding
 
 <Quiz id="day-2-sentinel-2-mrv-composite" questions={[
-  { q: "Why does the Bhutan MRV composite use January–April and October–December?", options: ["They are the warmest months", "They have enough clear Sentinel-2 images and stay inside the reporting year", "Sentinel-2 does not operate in the monsoon", "They match the fiscal year"], answer: 1, explain: "The monthly image counts show strong support in these windows and almost none in June–August; keeping both inside the year suits annual MRV reporting." },
+  { q: "Why does the Bhutan composite use January–April and October–December?", options: ["They are the warmest months", "They have enough clear Sentinel-2 images and stay inside the reporting year", "Sentinel-2 does not operate in the monsoon", "They match the fiscal year"], answer: 1, explain: "The monthly image counts show strong support in these windows and almost none in June–August; keeping both inside the year suits annual MRV reporting." },
   { q: "What does Cloud Score+'s cs_cdf band with a threshold of 0.60 do?", options: ["Masks pixels with a clear score below 0.60", "Masks scenes with more than 60% cloud", "Masks pixels with NDVI below 0.60", "Scales reflectance by 0.60"], answer: 0, explain: "cs_cdf runs from 0 (not clear) to 1 (clear); pixels below the threshold are masked." },
   { q: "What does TDOM detect?", options: ["Bright clouds", "Pixels much darker than usual in NIR and SWIR, which are likely shadows", "Snow", "Changes in land cover"], answer: 1, explain: "TDOM flags temporal dark outliers using z-scores against a multi-year reference." },
   { q: "Terrain correction makes the same forest on sunlit and shaded slopes look more alike.", answer: true, explain: "It adjusts each band using the illumination condition from slope, aspect and sun position." },
